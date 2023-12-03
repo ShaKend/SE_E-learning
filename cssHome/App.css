@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image:url(assets/mathbackground.jpg);    
+    background-image:url('../assets/mathbackground.jpg');    
     color: #eaeaea;
 }
 
@@ -151,9 +151,11 @@ height: 90vh;
 }
 
 
-
-
-
+/* content 4 */
+/* footer  */
+.content4{
+  height: 55px;
+}
 
 
 

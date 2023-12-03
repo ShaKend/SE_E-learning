@@ -22,26 +22,46 @@
 //     }
 // }
 
-function validateform(event) {
-    var Name = document.getElementById("Name").value;
-    var SignUpEmail = document.getElementById("SignUpEmail").value;
-    var SignUpPassword = document.getElementById("SignUpPassword").value;
+
+
+
+
+
+//akan ada untuk student dan untuk admin
+//std = student, adm = admin
+
+function addStudent() {
+  //std = student, Reg = register
+    let regex = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}/i; //untuk check email valid atau tidak
+    let stdRegName = $("#Name").val();
+    let stdRegEmail = $("#SignUpEmail").val();
+    let stdRegPassword = $("#SignUpPassword").val();
   
     event.preventDefault();
-  
-    if (Name === "") {
-      alert("Username cannot be empty");
-    } else if (!SignUpEmail.endsWith("@gmail.com")) {
-      alert("Email must end with @gmail.com");
-    } else if (!CheckPassword(SignUpPassword)) {
-      alert("Password must be at least 8 characters and must include both letters and numbers");
-    } else if (ConfirmPassword !== SignUpPassword) {
-      alert("Password check must be the same as the password");
-    }else {
-        window.location.href = "HomePage.html";
-      }
+
+    if (!regex.test(stdRegEmail) && stdRegEmail.trim() != "") {
+      $("#regisStatus2").html("<small class='text-danger'> Invalid email</small>");
+      $("#SignUpEmail").focus();
+      return false;
+    } else if (stdRegName.trim() == "") {
+      $("#regisStatus1").html("<small class='text-danger'> Please put name</small>");
+      $("#Name").focus();
+      return false;
+    } else if (stdRegEmail.trim() == "") {
+      $("#regisStatus2").html("<small class='text-danger'> Please put email</small>");
+      $("#SignUpEmail").focus();
+      return false;
+    } else if (stdRegPassword.trim() == "") {
+      $("#regisStatus3").html("<small class='text-danger'> Please put password</small>");
+      $("#SignUpPassword").focus();
+      return false;
+    }else{
+      // INI NANTI GANTI PAKE AJAX YAA
+      window.location.href = "https://getbootstrap.com/";
+    }
   }
 
+  //show login dan register ketika link di klik
   document.addEventListener("DOMContentLoaded", ()=>{
     const loginForm = document.querySelector("#login")
     const createAccountForm = document.querySelector("#createAccount")
@@ -92,6 +112,8 @@ function validateform(event) {
   });
 });
 
+
+//untuk menampilkan dan menghilangkan login
 function on() {
   document.getElementById("overlay").style.display = "block";
 }
