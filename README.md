@@ -17,4 +17,6 @@ Baru kelar versi static dan html doang, database dan php bakal dibuat
 
 ## Done
 
-- konversi html jadi php
+- konversi html jadi php(hanya home)
+- menambahkan file jquery
+- js/index.js -> mengganti beberapa baris menggunakan jquery
