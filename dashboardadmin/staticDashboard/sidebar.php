@@ -18,7 +18,6 @@
           </nav>
     </section>
 
-    <div class="container">
 
         <!-- Sidebar  -->
         <nav id="sidebar">

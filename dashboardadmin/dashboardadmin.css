@@ -42,14 +42,15 @@ a:focus {
 #sidebar {
   display: flex;
   flex-direction: column;
-  position: sticky;
+  position: absolute;
   /* width: 100%; */
   align-items: stretch;
   min-width: 250px;
   max-width: 250px;
   color: #313131;
+  background-color: #F6F4EB;
   transition: all 0.3s;
-  height: 100vh;
+  height: 98%;
 }
 
 #sidebar ul li {
@@ -101,15 +102,7 @@ i {
 /* ----------------------------------------------------
     Profile PAGE
 -------------------------------------------------------*/
-.container {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
+
 
 .formgroup p {
   font-weight: 400;
@@ -167,11 +160,6 @@ i {
   /* border-bottom: #313131 2px solid; */
 }
 
-.profilecontent {
-  /* background-color: antiquewhite; */
-  width: 100%;
-  height: 100%;
-}
 
 .update-profile {
   display: flex;
@@ -184,11 +172,9 @@ i {
 
 /* Perbarui gaya untuk formulir dan elemen-elemen anaknya */
 .formprofile {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   max-width: 400px; /* Sesuaikan max-width sesuai kebutuhan desain Anda */
-  padding: 20px; /* Tambahkan padding untuk jarak yang lebih baik */
   margin-top: 20px; /* Sesuaikan margin-top sesuai kebutuhan */
 }
 
@@ -246,7 +232,8 @@ i {
 }
 
 .contentdashAdmin {
-  width: 100%;
+  width: 800px;
+  margin: auto;
 }
 
 .carddashadmin p,
@@ -264,18 +251,18 @@ i {
   margin-bottom: 30px;
   height: 30px;
 }
-
-/* CSS tambahan untuk menentukan lebar maksimal tabel */
-.tableContent {
-  width: 600px;
-}
-/* Pastikan bahwa tabel memiliki lebar maksimal di dalam konten */
-.contentdashAdmin {
-  max-width: 100vh; /* Sesuaikan lebar maksimal sesuai kebutuhan Anda */
-  margin: auto; /* Menengahkan konten dengan margin otomatis */
-  width: 100%;
+.tableTurner{
+  display: flex;
   justify-content: center;
 }
+/* CSS tambahan untuk menentukan lebar maksimal tabel */
+.tableContent {
+  width: 800px;
+}
+/* Pastikan bahwa tabel memiliki lebar maksimal di dalam konten */
+/* .contentdashAdmin {
+
+} */
 
 .middledashadmin {
   display: flex;
@@ -292,36 +279,15 @@ i {
   margin-left: 10px;
 }
 
-.container {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
+/* .container {
+
+} */
 
 .formgroup p {
   font-weight: 400;
   color: #313131;
 }
 
-.profilecontent form {
-  /* display: flex;
-    justify-content: center;
-    align-items: center; */
-  flex-direction: column;
-  margin-right: auto;
-  margin-bottom: 180px;
-}
-
-.profilecontent form .formgroup {
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  flex-direction: column;
-}
 
 .formgroup input[type="text"],
 .formgroup input[type="email"] {
@@ -358,11 +324,6 @@ i {
   /* border-bottom: #313131 2px solid; */
 }
 
-.profilecontent {
-  /* background-color: antiquewhite; */
-  width: 100%;
-  height: 100%;
-}
 
 .update-profile {
   display: flex;
@@ -373,24 +334,14 @@ i {
   background-color: #464444;
 }
 
-/* Perbarui gaya untuk formulir dan elemen-elemen anaknya */
-.formprofile {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 400px; /* Sesuaikan max-width sesuai kebutuhan desain Anda */
-  padding: 20px; /* Tambahkan padding untuk jarak yang lebih baik */
-  margin-top: 20px; /* Sesuaikan margin-top sesuai kebutuhan */
+.formSize{
+  width: 400px;
 }
 
 .formgroup {
-  margin-bottom: 15px;
   width: 100%; /* Pastikan form group mengambil lebar penuh */
 }
 
-.formgroup p {
-  margin-bottom: 8px;
-}
 
 .update-profile {
   width: 80px; /* Sesuaikan lebar tombol sesuai kebutuhan */
@@ -462,19 +413,14 @@ i {
   border-top-right-radius: 10px;
 }
 
-.table {
-  max-width: 100vh; /* Sesuaikan lebar maksimal sesuai kebutuhan Anda */
-  margin: auto; /* Menengahkan tabel dengan margin otomatis */
-}
+/* .table {
+
+} */
 
 /* Pastikan bahwa tabel memiliki lebar maksimal di dalam konten */
-.contentdashAdmin {
-  max-width: 100vh; /* Sesuaikan lebar maksimal sesuai kebutuhan Anda */
-  margin-bottom: auto; /* Menengahkan konten dengan margin otomatis */
-  max-height: 100vh;
-  width: 100%;
-  justify-content: center;
-}
+/* .contentdashAdmin {
+
+} */
 
 .middlelessons {
   display: flex;
