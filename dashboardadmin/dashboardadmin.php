@@ -23,10 +23,10 @@
         <nav id="sidebar">
             <ul class="list-unstyled components">
                 <li>
-                    <a href="./dashboardadmin/dashboardadmin.html"><i class="fa-solid fa-book" style="color: #ffffff;"></i>Dashboard </a>
+                    <a href="dashboardadmin.php"><i class="fa-solid fa-book" style="color: #ffffff;"></i>Dashboard </a>
                 </li>
                 <li>
-                    <a href="./dashboardadmin/student.html"><i class="fa-solid fa-book" style="color: #ffffff;"></i>Students </a>
+                    <a href="student.html"><i class="fa-solid fa-book" style="color: #ffffff;"></i>Students </a>
                 </li>
 
                 <li>
