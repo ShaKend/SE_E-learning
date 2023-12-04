@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./cssHome/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-</head>
 <body>
     <!-- navbar -->
     <section id="nav">
@@ -47,16 +46,16 @@
                 
                 <div class="form__message form__message--error"></div>
                 <div class="form__input-group">
-                    <h5>Email</h5>
-                  <input type="email" class="form__input" autofocus required placeholder="loginEmail">
+                  <h5>Email</h5>
+                  <input type="email" class="form__input" id="loginEmail" autofocus required placeholder="loginEmail">
                   <div class="form__input--error-message"></div>
                 </div>
                 <div class="form__input-group">
-                    <h5>Passoword</h5>
-                  <input type="password" class="form__input" autofocus required placeholder="loginPassword">
+                    <h5>Password</h5>
+                  <input type="password" class="form__input" id="loginPass" autofocus required placeholder="loginPassword">
                   <div class="form__input--error-message"></div>
                 </div>
-                <button class="form__button" type="submit">Submit</button>
+                <button class="form__button" type="submit" onclick="stdLogin()">Submit</button>
                 <p class="form__text">
                   Don’t have an account? <a class="form__link" id="linkCreateAccount">Register now</a>
                 </p>
