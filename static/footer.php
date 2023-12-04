@@ -1,7 +1,7 @@
 <!-- footer -->
-<section class="bg-dark content4">
-    <div class="footer text-center pt-3">Copyright 2022 || Designed by Kelompok 1 || Login</div>
-</section>
+<footer>
+    <p>@Copyright 2023 || Designed By Kelompok 1  <a href="" id="showloginadmin" onclick="on()">Login</a></p>
+</footer>
 <!-- gtw ini apaan -->
 <div class="course">
     <div class="card-row">

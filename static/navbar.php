@@ -48,8 +48,9 @@
                 <div class="form__input-group">
                   <h5>Email</h5>
                   <input type="email" class="form__input" id="loginEmail" autofocus required placeholder="loginEmail">
-                  <div class="form__input--error-message"></div>
-                </div>
+                <div class="form__input--error-message"></div>
+          </div>
+
                 <div class="form__input-group">
                     <h5>Password</h5>
                   <input type="password" class="form__input" id="loginPass" autofocus required placeholder="loginPassword">
@@ -88,5 +89,24 @@
                 Already have an account? <a class="form__link" id="linkLogin">Sign in</a>
               </p>
             </form>
+            <!-- Login Admin -->
+        <form class="form form--hidden" id="loginadminform" action="">
+          <div class="upper-login">
+            <a class="close" id="CloseLoginAdmin" onclick="off()">X</a>
+              <h1 class="form__title">Admin Login</h1>
+          </div>
+          <div class="form__input-group">
+              <h5>Email</h5>
+              <input type="email" class="form__input" id="AdminEmail" autofocus placeholder="Email">
+              <div class="form__input--error-message"></div>
+          </div>
+          <div class="form__input-group">
+              <h5>Password</h5>
+              <input type="password" class="form__input" id="AdminPassword" autofocus placeholder="Password">
+              <div class="form__input--error-message"></div>
+          </div>
+          <h6 id="errormessage"></h6>
+          <button class="form__button" onclick="validateAdminForm(event)">Submit</button>
+        </form>
         </div>
     </div>

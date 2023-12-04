@@ -149,3 +149,27 @@
 .form__link:hover{
     text-decoration: underline;
 }
+
+form .upper-login{
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-login a{
+    margin-left: auto;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    background-color: rgb(255, 94, 0);
+}
+
+nav a{
+    cursor: pointer;
+}
