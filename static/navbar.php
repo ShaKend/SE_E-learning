@@ -24,7 +24,7 @@
                   <a class="nav-link text-light" href="#content3">Courses</a>
                   <a class="nav-link text-light" href="#">About</a>
                   <a class="nav-link text-light" id="showLogin" onclick="on()">Login</a>
-                  <a class="nav-link text-light" id="showLogin">Logout</a>
+                  <a class="nav-link text-light" id="showLogin" href="./query/logout.php">Logout</a>
                   <a class="nav-link text-light" id="showCreateAccount" onclick="on()">Sign Up</a>
 
                 </div>
