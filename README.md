@@ -1,4 +1,4 @@
-# E-learning
+# E-learning (ini branch mockup ya)
 
 Baru kelar versi static dan html doang, database dan php bakal dibuat
 
