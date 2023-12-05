@@ -23,7 +23,11 @@
                   <a class="nav-link active text-light" id="homenav" aria-current="page" href="#">Home</a>
                   <a class="nav-link text-light" href="#content3">Courses</a>
                   <a class="nav-link text-light" href="#">About</a>
+
+                  <!-- jika user sudah login tampilkan ini pake session -->
                   <a class="nav-link text-light" id="showLogin" onclick="on()">Login</a>
+
+                  <!-- jika belum tampilkan ini  -->
                   <a class="nav-link text-light" id="showLogin" href="./query/logout.php">Logout</a>
                   <a class="nav-link text-light" id="showCreateAccount" onclick="on()">Sign Up</a>
 
@@ -41,7 +45,7 @@
                 <div class="upper-login">
                   <!-- <h2 class="close" id="Closeform">X</h2> -->
                   <h1 class="form__title">Student Login</h1>
-                  <a class="close" id="CloseLoginForm" onclick="off()">close</a>
+                  <a class="close" id="CloseLoginForm" onclick="off()">x</a>
                 </div>
                 
                 <div class="form__message form__message--error"></div>
@@ -59,6 +63,7 @@
                 <button class="form__button" type="submit" onclick="stdLogin()">Submit</button>
                 <p class="form__text">
                   Don’t have an account? <a class="form__link" id="linkCreateAccount">Register now</a>
+                  <span class="statusLogin"></span>
                 </p>
             </form>
             <!-- REGISTER -->
@@ -84,9 +89,10 @@
                 <div class="form__input--error-message"></div>
               </div>
               <h6 id="errormessage"></h6>
-              <button class="form__button" onclick="addStudent()">Submit</button>
+              <button class="form__button" onclick="addStudent()" id="btnRegis">Submit</button>
               <p class="form__text">
                 Already have an account? <a class="form__link" id="linkLogin">Sign in</a>
+                <span class="statusLogin"></span>
               </p>
             </form>
             <!-- Login Admin -->
@@ -96,17 +102,17 @@
               <h1 class="form__title">Admin Login</h1>
           </div>
           <div class="form__input-group">
-              <h5>Email</h5>
-              <input type="email" class="form__input" id="AdminEmail" autofocus placeholder="Email">
+              <h5>Admin Email</h5>
+              <input type="email" class="form__input" id="adminEmail" autofocus placeholder="Email">
               <div class="form__input--error-message"></div>
           </div>
           <div class="form__input-group">
               <h5>Password</h5>
-              <input type="password" class="form__input" id="AdminPassword" autofocus placeholder="Password">
+              <input type="password" class="form__input" id="adminPassword" autofocus placeholder="Password">
               <div class="form__input--error-message"></div>
           </div>
-          <h6 id="errormessage"></h6>
-          <button class="form__button" onclick="validateAdminForm(event)">Submit</button>
+          <h6 id="statusLogin"></h6>
+          <button class="form__button" onclick="admLogin()">Submit</button>
         </form>
         </div>
     </div>

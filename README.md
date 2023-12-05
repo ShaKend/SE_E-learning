@@ -1,8 +1,6 @@
-
 # E-learning
 
 Baru kelar versi static dan html doang, database dan php bakal dibuat
-
 
 ## To Do
 
@@ -14,9 +12,8 @@ Baru kelar versi static dan html doang, database dan php bakal dibuat
 - buat database
 - query data dari database
 
-
 ## Done
 
-- konversi html jadi php(hanya home)
+- konversi html jadi php(hanya home, dasboard admin dan student)
 - menambahkan file jquery
 - js/index.js -> mengganti beberapa baris menggunakan jquery

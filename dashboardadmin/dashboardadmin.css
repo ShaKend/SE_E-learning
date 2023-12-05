@@ -48,7 +48,7 @@ a:focus {
   min-width: 250px;
   max-width: 250px;
   color: #313131;
-  background-color: #F6F4EB;
+  background-color: #f6f4eb;
   transition: all 0.3s;
   height: 98%;
 }
@@ -102,7 +102,6 @@ i {
 /* ----------------------------------------------------
     Profile PAGE
 -------------------------------------------------------*/
-
 
 .formgroup p {
   font-weight: 400;
@@ -159,7 +158,6 @@ i {
   outline: none;
   /* border-bottom: #313131 2px solid; */
 }
-
 
 .update-profile {
   display: flex;
@@ -251,7 +249,7 @@ i {
   margin-bottom: 30px;
   height: 30px;
 }
-.tableTurner{
+.tableTurner {
   display: flex;
   justify-content: center;
 }
@@ -288,7 +286,6 @@ i {
   color: #313131;
 }
 
-
 .formgroup input[type="text"],
 .formgroup input[type="email"] {
   border: none;
@@ -324,7 +321,6 @@ i {
   /* border-bottom: #313131 2px solid; */
 }
 
-
 .update-profile {
   display: flex;
   justify-content: center;
@@ -334,14 +330,13 @@ i {
   background-color: #464444;
 }
 
-.formSize{
+.formSize {
   width: 400px;
 }
 
 .formgroup {
   width: 100%; /* Pastikan form group mengambil lebar penuh */
 }
-
 
 .update-profile {
   width: 80px; /* Sesuaikan lebar tombol sesuai kebutuhan */
@@ -459,5 +454,12 @@ i {
   }
   #sidebarCollapse span {
     display: none;
+  }
+}
+
+@media screen and (min-device-width: 1000px) {
+  .contentdashAdmin,
+  .tableContent {
+    width: 600px;
   }
 }

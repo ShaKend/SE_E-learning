@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISchool</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Elearning/Elearning.css">
+    <link rel="stylesheet" href="./elearning.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 </head>
@@ -18,41 +18,25 @@
           </nav>
     </section>
 
-    <div class="container">
-
         <!-- Sidebar  -->
         <nav id="sidebar">
             <ul class="list-unstyled components">
                 <li class="imgprofile">
-                    <img src="/assets/gambaruser.png" alt="">
+                    <img src="../assets/gambaruser.png" alt="">
 
                 </li>
-                <li style="background-color: #333232;">
-                    <a href="/Elearning/profile.html"><i class="fa-solid fa-user" style="color: #f5f5f5;"></i>Profile</a>
+                <li>
+                    <a href="./profile.php"><i class="fa-solid fa-user"></i>Profile</a>
                 </li>
 
                 <li>
-                    <a href="/Elearning/mycourses.html"><i class="fa-solid fa-book" style="color: #ffffff;"></i>My Courses</a>
+                    <a href="./mycourses.php"><i class="fa-solid fa-book"></i>My Courses</a>
                 </li>
                 <li>
-                    <a href="/Elearning/changepassword.html"><i class="fa-solid fa-key" style="color: #ffffff;"></i>Change Password</a>
+                    <a href="./changepassword.php"><i class="fa-solid fa-key"></i>Change Password</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i>Logout</a>
+                    <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
                 </li>
             </ul>
         </nav>
-
-
-        <!-- Changepassword content -->
-        
-
-
-    </div>
-
-
-    <script src="/js/Elearning.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
-</body>
-
-</html>
