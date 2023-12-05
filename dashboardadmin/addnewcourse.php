@@ -1,30 +1,43 @@
 <?php
+if(!isset($_SESSION)){
+    session_start();
+}
+
+include('./staticDashboard/sidebar.php');
+//ini perlu
+include('../query/dbConnection.php');
+
+//jika gak login
+if (!isset($_SESSION['isAdmLogin'])) {
+    echo "<script>location.href='../index.php'";
+}
+
 include('./staticDashboard/sidebar.php');
 //include('../query/dbConnection.php');
 
-// if(isset($_REQUEST['newCourse'])){
-//     //cek sudah ada course atau blm
-//     if(($_REQUEST['courseName'] == '') || ($_REQUEST['courseDesc'] == '')){
-//         $msg = "<span class='text-danger'>fill all forms!</span>"
-//     }else{
-//         $courseName = $_REQUEST['courseName'];
-//         $courseDesc = $_REQUEST['courseDesc'];
-//         $courseAuthor = $_REQUEST['courseAuthor'];
-//         $courseImage = $_FILES['courseImage']['name'];
-//         $courseImageTemp = $_FILES['courseImage']['temp'];
-//         //$imgFolder = '../folder/folder'.$courseImage;  <- part 9 menit 45:00
-//         move_uploaded_file($courseImageTemp, $imgFolder);
+if(isset($_REQUEST['newCourse'])){
+    //cek sudah ada course atau blm
+    if(($_REQUEST['courseName'] == '') || ($_REQUEST['courseDesc'] == '')){
+        $msg = "<span class='text-danger'>fill all forms!</span>";
+    }else{
+        $courseName = $_REQUEST['courseName'];
+        $courseDesc = $_REQUEST['courseDesc'];
+        $courseAuthor = $_REQUEST['courseAuthor'];
+        $courseImage = $_FILES['courseImage']['name'];
+        $courseImageTemp = $_FILES['courseImage']['temp'];
+        //$imgFolder = '../image/courseimg'.$courseImage;  <- part 9 menit 45:00  nama foldernya ubah ajja
+        move_uploaded_file($courseImageTemp, $imgFolder);
 
-//         $sql = "INSERT INTO course (course_name, course_desc, course_author, courseImage) VALUES
-//                 ('$courseName', '$courseDesc', '$courseAuthor', '$courseImage', '$imgFolder')";
+        $sql = "INSERT INTO course (course_name, course_desc, course_author, course_image) VALUES
+                ('$courseName', '$courseDesc', '$courseAuthor', '$imgFolder')";
 
-//         $if($conn->query($sql) == true){
-//             $msg = "<span class='text-success'>Course added</span>"
-//         }else{
-//             $msg = "<span class='text-danger'>failed</span>"
-//         }
-//     }
-// }
+        if($conn->query($sql) == true){
+            $msg = "<span class='text-success'>added!</span>";
+        }else{
+            $msg = "<span class='text-danger'>failed</span>";
+        }
+    }
+}
 ?>
 
 <div class="container mt-5">

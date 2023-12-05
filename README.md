@@ -1,19 +1,19 @@
-# E-learning (ini branch mockup ya)
+# PART 9
 
-Baru kelar versi static dan html doang, database dan php bakal dibuat
+Jika program tidak bisa dijalankan, coba disable sessionnya.
+BTW ini blm pernah di run, jadi gtw errornya ada dimana aja
 
 ## To Do
 
-- ubah file html jadi php
 - bagi tiap file html jadi bagian-bagian .php
 - nyambungin tiap tiap .php file
 - ubah js jadi jquery?
 - AJJAAAAAAXXXX
 - buat database
-- query data dari database
 
 ## Done
 
 - konversi html jadi php(hanya home, dasboard admin dan student)
 - menambahkan file jquery
 - js/index.js -> mengganti beberapa baris menggunakan jquery
+- query db
