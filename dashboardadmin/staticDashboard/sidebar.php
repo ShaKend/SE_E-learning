@@ -39,6 +39,9 @@
                     <a href="changepasswordadmin.php"><i class="fa-solid fa-book"></i>Change Password</a>
                 </li>
                 <li>
+                    <a href="../home.php"><i class="fa-solid fa-book"></i>Home</a>
+                </li>
+                <li>
                     <a href="#"><i class="fa-solid fa-book"></i>Logout</a>
                 </li>
             </ul>

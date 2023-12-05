@@ -5,7 +5,24 @@ include('./staticDashboard/sidebar.php');
 // if(isset($_REQUEST['newCourse'])){
 //     //cek sudah ada course atau blm
 //     if(($_REQUEST['courseName'] == '') || ($_REQUEST['courseDesc'] == '')){
-//         $msg = "fill all fields";
+//         $msg = "<span class='text-danger'>fill all forms!</span>"
+//     }else{
+//         $courseName = $_REQUEST['courseName'];
+//         $courseDesc = $_REQUEST['courseDesc'];
+//         $courseAuthor = $_REQUEST['courseAuthor'];
+//         $courseImage = $_FILES['courseImage']['name'];
+//         $courseImageTemp = $_FILES['courseImage']['temp'];
+//         //$imgFolder = '../folder/folder'.$courseImage;  <- part 9 menit 45:00
+//         move_uploaded_file($courseImageTemp, $imgFolder);
+
+//         $sql = "INSERT INTO course (course_name, course_desc, course_author, courseImage) VALUES
+//                 ('$courseName', '$courseDesc', '$courseAuthor', '$courseImage', '$imgFolder')";
+
+//         $if($conn->query($sql) == true){
+//             $msg = "<span class='text-success'>Course added</span>"
+//         }else{
+//             $msg = "<span class='text-danger'>failed</span>"
+//         }
 //     }
 // }
 ?>
@@ -36,7 +53,7 @@ include('./staticDashboard/sidebar.php');
 
                 <div class="formgroup">
                     <p>Upload Image</p>
-                    <input type="file" accept="image/jpeg, image/png, image/jpg, video/mp4" name="courseName" id="courseName">
+                    <input type="file" accept="image/jpeg, image/png, image/jpg, video/mp4" name="courseImage" id="courseImage">
                 </div>
 
                 <div class="formgroup" style="display: flex; flex-direction: row; gap: 10px;">
