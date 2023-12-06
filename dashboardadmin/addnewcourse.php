@@ -17,7 +17,7 @@ include('./staticDashboard/sidebar.php');
 
 if(isset($_REQUEST['newCourse'])){
     //cek sudah ada course atau blm
-    if(($_REQUEST['courseName'] == '') || ($_REQUEST['courseDesc'] == '')){
+    if(($_REQUEST['courseName'] == '') || ($_REQUEST['courseDesc'] == '') || ($_REQUEST['courseAuthor'] == '')){
         $msg = "<span class='text-danger'>fill all forms!</span>";
     }else{
         $courseName = $_REQUEST['courseName'];
@@ -46,7 +46,7 @@ if(isset($_REQUEST['newCourse'])){
     <hr>
 
 
-        <form action="" class="formprofile mt-4">
+        <form action="" method="POST" class="formprofile mt-4">
                 <div class="formgroup">
                     <p>Course Name</p>
                     <input type="text" placeholder="Course Name" class="formSize" name="courseName" id="courseName">

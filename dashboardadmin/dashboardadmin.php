@@ -15,6 +15,7 @@ if (!isset($_SESSION['isAdmLogin'])) {
     echo "<script>location.href='../index.php'";
 }
 
+
 include('./staticDashboard/sidebar.php'); 
 ?>
 

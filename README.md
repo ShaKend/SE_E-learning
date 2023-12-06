@@ -1,19 +1,11 @@
-# PART 9
+# PART 11
 
 Jika program tidak bisa dijalankan, coba disable sessionnya.
 BTW ini blm pernah di run, jadi gtw errornya ada dimana aja
 
 ## To Do
 
-- bagi tiap file html jadi bagian-bagian .php
-- nyambungin tiap tiap .php file
-- ubah js jadi jquery?
-- AJJAAAAAAXXXX
-- buat database
+- programnya blm pernah di run samsek
+- ada beberapa part yg diubah sedikit
+- ketika sambungin ke database, global variabelny diubah lagi nyesuain yg di database
 
-## Done
-
-- konversi html jadi php(hanya home, dasboard admin dan student)
-- menambahkan file jquery
-- js/index.js -> mengganti beberapa baris menggunakan jquery
-- query db
