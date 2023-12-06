@@ -59,12 +59,14 @@ if (isset($_REQUEST['delete'])) {
                         <td><?= $row['course_name']; ?></td>
                         <td><?= $row['course_author']; ?></td>
                         <td>
+                            <!-- ini bakal pergi ke halama editcourse.php  -->
                             <form action="editcourse.php" method="POST" class="d-inline">
-                                <input type="hidden" name="id" value="<?= $row['course_ID'] ?>">
+                                <input type="hidden" name="id" value="<?php if(isset($row['course_ID'])) {echo $row['course_ID'];} ?>">
                                 <button type="submit" name="view" id="view"><i class="fa-solid fa-pen-to-square" style="color: #1361e7;"></i></button>
                             </form>
+                            <!-- ini stay disini -->
                             <form action="" method="POST" class="d-inline">
-                                <input type="hidden" name="id" value="<?= $row['course_ID'] ?>">
+                                <input type="hidden" name="id" value="<?php if(isset($row['course_ID'])) {echo $row['course_ID'];} ?>">
                                 <button type="submit" name="delete" id="delete"><i class="fa-solid fa-trash" style="color: #ff0019;"></i></button>
                             </form>
                         </td>
