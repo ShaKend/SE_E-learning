@@ -1,12 +1,12 @@
 <?php
 include_once('../dbConnection.php');
 
-if (isset($_POST['stdsignup']) && isset($_POST['stdRegName']) && isset($_POST['stdRegEmail']) && isset($_POST['stdRegPassword'])) {
+if (isset($_POST['stdRegName']) && isset($_POST['stdRegEmail']) && isset($_POST['stdRegPassword'])) {
     $stdName = $_POST['stdRegName'];
     $stdEmail = $_POST['stdRegEmail'];
-    $stdPassword = $_POST['stdPassword'];
+    $stdPassword = $_POST['stdRegPassword'];
 
-    $sql = "INSERT INTO students(std_name, std_email, std_password) VALUES ('$stdName', '$stdEmail', '$stdPassword')";
+    $sql = "INSERT INTO student(stu_name, stu_email, stu_pass) VALUES ('$stdName', '$stdEmail', '$stdPassword')";
 
     if ($conn->query($sql) == true) {
         echo json_encode("yes");

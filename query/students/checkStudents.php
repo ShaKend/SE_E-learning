@@ -1,13 +1,13 @@
 <?php
-if(!isset($_SESSION)){
-    session_start();
-}
+// if(!isset($_SESSION)){
+//     session_start();
+// }
 
 //untuk ngecek apakah email sudah terdaftar atau belum
 include_once('../dbConnection.php');
 if(isset($_POST['checkmail']) && isset($_POST['stdEmail'])){
     $stdEmail = $_POST['stdEmail'];
-    $sql = "SELECT std_email FROM users WHERE std_email = '".$stdEmail."'";
+    $sql = "SELECT stu_email FROM student WHERE stu_email = '".$stdEmail."'";
     $result = $conn->query($sql);
     $row = $result->num_rows;
     echo json_encode($row);
@@ -17,7 +17,7 @@ if(isset($_POST['checkmail']) && isset($_POST['stdEmail'])){
 if (isset($_POST['checklogin']) && isset($_POST['stdLogEmail']) && isset($_POST['stdLogPass'])) {
     $stdLogEmail = $_POST['stdLogEmail'];
     $stdLogPass = $_POST['stdLogPass'];
-    $sql = "SELECT std_email, std_password FROM users WHERE std_email = '".$stdLogEmail."' AND std_password = '".$stdLogPass."'";
+    $sql = "SELECT stu_email, stu_password FROM student WHERE stu_email = '".$stdLogEmail."' AND stu_password = '".$stdLogPass."'";
     $result = $conn->query($sql);
     $row = $result->num_rows;
     if ($row === 1) {
