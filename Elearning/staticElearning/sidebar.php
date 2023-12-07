@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +36,9 @@
                 </li>
                 <li>
                     <a href="./changepassword.php"><i class="fa-solid fa-key"></i>Change Password</a>
+                </li>
+                <li>
+                    <a href="../home.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Home</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>

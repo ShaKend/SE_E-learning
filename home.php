@@ -14,15 +14,15 @@
     <!-- switching content -->
     <section id="content2">
         <li class="content2">
-            <div class="isi">
+            <div class="isi  animated  fadeInDown fast">
                 <i class="fa-solid fa-book-open" style="color: #ffffff;"></i>
                 <p><span>100+</span> Online Course</p>
             </div>
-            <div class="isi">
+            <div class="isi  animated  fadeInDown slow">
                 <i class="fa-solid fa-users" style="color: #ffffff;"></i></i>
                 <p><span>Expert</span> Instructor</p>
             </div>
-            <div class="isi">
+            <div class="isi  animated  fadeInDown faster">
                 <i class="fa-solid fa-keyboard" style="color: #ffffff;"></i>
                 <p><span>Lifetime</span> Access</p>
             </div>

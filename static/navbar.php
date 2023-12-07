@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./cssHome/App.css">
     <link rel="stylesheet" href="./cssHome/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -14,7 +19,7 @@
     <section id="nav">
         <nav class="navbar navbar-expand-lg bg-body-transparent">
             <div class="container-fluid">
-              <a class="navbar-brand text-light" href="#">ISchool <span>Learning Path Management</span></a>
+            <a class="navbar-brand text-light  animated  fadeInLeft delay-2s" href="#"><img style="height: 80px; width: 120px;" src="./assets/LogoRooMath.png" alt=""> <span>Learning Path Management</span></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -23,8 +28,12 @@
                   <a class="nav-link active text-light" id="homenav" aria-current="page" href="#">Home</a>
                   <a class="nav-link text-light" href="#content3">Courses</a>
                   <a class="nav-link text-light" href="#">About</a>
-                  <a class="nav-link text-light" id="showLogin" onclick="on()">Login</a>
+                  <?php if (isset($_SESSION['isLogin'])) { ?>
+                  <a class="nav-link text-light" href="./Elearning/profile.php">My Profile</a>
                   <a class="nav-link text-light" id="showLogin" href="./query/logout.php">Logout</a>
+                  <?php }else{ ?>
+                  <a class="nav-link text-light" id="showLogin" onclick="on()">Login</a>
+                  <?php } ?>
                   <a class="nav-link text-light" id="showCreateAccount" onclick="on()">Sign Up</a>
 
                 </div>
@@ -54,7 +63,7 @@
                 <div class="form__input-group">
                     <h5>Password</h5>
                   <input type="password" class="form__input" id="loginPass" autofocus required placeholder="loginPassword">
-                  <div class="form__input--error-message"></div>
+                  <div class="form__input--error-message"><span class="loadingLogin"></span></div>
                 </div>
                 <button class="form__button" type="submit" onclick="stdLogin()">Submit</button>
                 <p class="form__text">
@@ -62,7 +71,7 @@
                 </p>
             </form>
             <!-- REGISTER -->
-            <form class="form form--hidden" id="createAccount" action="">
+            <form class="form form--hidden text-dark" id="createAccount" action="">
               <div class="upper-login">
                 <!-- <h2 class="close" id="Closeformregister">X</h2> -->
                 <h1 class="form__title">Student Register</h1>
@@ -83,8 +92,8 @@
                 <input type="password" class="form__input" id="SignUpPassword" autofocus placeholder="Password">
                 <div class="form__input--error-message"></div>
               </div>
-              <h6 id="errormessage">error!</h6>
-              <button class="form__button" onclick="addStudent()">Submit</button>
+              <h6 id="errormessage"></h6>
+              <button class="form__button" onclick="addStudent()" id="btnRegis">Submit</button>
               <p class="form__text">
                 Already have an account? <a class="form__link" id="linkLogin">Sign in</a>
               </p>

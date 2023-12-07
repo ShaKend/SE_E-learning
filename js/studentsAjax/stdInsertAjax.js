@@ -3,7 +3,6 @@
 //query HANYA untuk INSERT disini aja ya, yg lainnya di folder ajax
 function addStudent() {
   //std = student, Reg = register
-  event.preventDefault();
   let regex = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}/i; //untuk check email valid atau tidak
   let stdRegName = $("#Name").val();
   let stdRegEmail = $("#SignUpEmail").val();
@@ -40,17 +39,21 @@ function addStudent() {
       success: function (data) {
         console.log(data);
         if (data == "yes") {
-          $("#createAccount").reset();
           $("#Name").val("");
           $("#SignUpEmail").val("");
           $("#SignUpPassword").val("");
           $("#errormessage").html("<span class='spinner-border text-success'></span>");
           setTimeout(() => {
-            window.location.href = "./home.php";
+            window.location.href = "./Lessons/lessons.php";
           }, 900);
         } else if (data == "no") {
           $(".statusLogin").html("<span class='text-danger'>Failed</span>");
         }
+      },
+      error: function (xhr, status, error) {
+        console.error(xhr.responseText);
+        // Handle the error and display an appropriate message to the user
+        $("#errormessage").html("<span class='text-danger'>Error occurred. Please try again.</span>");
       },
     });
   }
