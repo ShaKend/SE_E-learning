@@ -1,23 +1,23 @@
 //untuk mengecheck apakah email sudah terdaftar didatabase atau blm
 //
-$(document).ready(function () {
-  //ini menunggu folder untuk dirender, baru dieksekusi
-  $("#SignUpEmail").on("keypress blur", function () {
-    let stdRegEmail = $("#SignUpEmail").val();
+// $(document).ready(function () {
+//   //ini menunggu folder untuk dirender, baru dieksekusi
+//   $("#SignUpEmail").on("keypress blur", function () {
+//     let stdRegEmail = $("#SignUpEmail").val();
 
-    //AJAX DISINI YAAA, jgn lupa diganti
-    // $.ajax({
-    //   url: NA,
-    //   method: "POST",
-    //   data: {
-    //     stdEmail: stdRegEmail,
-    //   },
-    //   success: function () {
-    //     console.log(data);
-    //   },
-    // });
-  });
-});
+//     //AJAX DISINI YAAA, jgn lupa diganti
+//     // $.ajax({
+//     //   url: NA,
+//     //   method: "POST",
+//     //   data: {
+//     //     stdEmail: stdRegEmail,
+//     //   },
+//     //   success: function () {
+//     //     console.log(data);
+//     //   },
+//     // });
+//   });
+// });
 
 //login
 function stdLogin() {

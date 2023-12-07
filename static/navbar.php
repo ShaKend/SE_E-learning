@@ -83,7 +83,7 @@
                 <input type="password" class="form__input" id="SignUpPassword" autofocus placeholder="Password">
                 <div class="form__input--error-message"></div>
               </div>
-              <h6 id="errormessage"></h6>
+              <h6 id="errormessage">error!</h6>
               <button class="form__button" onclick="addStudent()">Submit</button>
               <p class="form__text">
                 Already have an account? <a class="form__link" id="linkLogin">Sign in</a>
