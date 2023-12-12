@@ -1,8 +1,8 @@
 <?php
 
-// if(!isset($_SESSION)){
-//     session_start();
-// }
+if(!isset($_SESSION)){
+    session_start();
+}
 
 //untuk ngecek apakah email sudah terdaftar atau belum
 include_once('../dbConnection.php');

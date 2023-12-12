@@ -106,16 +106,16 @@ session_start();
           </div>
           <div class="form__input-group">
               <h5>Email</h5>
-              <input type="email" class="form__input" id="AdminEmail" autofocus placeholder="Email">
+              <input type="email" class="form__input" id="adminEmail" autofocus placeholder="Email">
               <div class="form__input--error-message"></div>
           </div>
           <div class="form__input-group">
               <h5>Password</h5>
-              <input type="password" class="form__input" id="AdminPassword" autofocus placeholder="Password">
+              <input type="password" class="form__input" id="adminPassword" autofocus placeholder="Password">
               <div class="form__input--error-message"></div>
           </div>
-          <h6 id="errormessage"></h6>
-          <button class="form__button" onclick="validateAdminForm(event)">Submit</button>
+          <h6 id="errormessageAdm"></h6>
+          <button class="form__button" id="admLoginForm" type="button" onclick="admLogin()">Submit</button>
         </form>
         </div>
     </div>

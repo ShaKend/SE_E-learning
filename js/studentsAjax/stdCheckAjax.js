@@ -47,7 +47,7 @@ function stdLogin() {
       if (data == 1) {
         $(".loadingLogin").html("<span class='spinner-border text-success'></span>");
         setTimeout(() => {
-          window.location.href = "./profile.php";
+          window.location.href = "home.php";
         }, 900);
       } else if (data == 0) {
         $(".loadingLogin").html("<span class='text-danger'>Wrong</span>");

@@ -1,6 +1,7 @@
-
-        <!-- sidebar  -->
-        <?php include('./staticElearning/sidebar.php') ?>
+<!-- sidebar  -->
+<?php 
+include('./staticElearning/sidebar.php');
+?>
 
         <!-- Profile Content -->
         <div class="container mt-5">

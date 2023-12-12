@@ -1,6 +1,5 @@
-
-    <!-- navbar -->
-    <?php include('./static/navbar.php') ?>
+<!-- navbar -->
+<?php include('./static/navbar.php');?>
 
     <!-- starter page -->
     <section id="content1">

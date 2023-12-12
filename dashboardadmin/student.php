@@ -1,5 +1,7 @@
-
-        <?php include('./staticDashboard/sidebar.php'); ?>
+<?php 
+include('./staticDashboard/sidebar.php');
+session_start();
+?>
     <div class="container mt-5">
 
         <div class="contentdashAdmin">
