@@ -48,7 +48,7 @@ function stdLogin() {
       if (data == 1) {
         $(".statusLogin").html("<span class='spinner-border text-success'></span>");
         setTimeout(() => {
-          window.location.href = "";
+          window.location.href = "./Elearning/profile.php";
         }, 900);
       } else if (data == 0) {
         $(".statusLogin").html("<span class='text-danger'>Wrong</span>");
