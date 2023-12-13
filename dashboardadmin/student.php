@@ -1,6 +1,19 @@
 <?php 
+
+//login admun
+if(!isset($_SESSION)){
+    session_start();
+}
+
+//session admin
+if(!isset($_SESSION['isLoginAdm'])){
+    echo '<script>location.href = "../home.php"</script>';
+}else{
+    $adminEmail = $_SESSION['admLogEmail'];
+}
+
 include('./staticDashboard/sidebar.php');
-session_start();
+
 ?>
     <div class="container mt-5">
 

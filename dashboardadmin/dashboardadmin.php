@@ -1,7 +1,24 @@
 
 <!-- navbar and sidebar  -->
 <!-- SIDEBAR ada di div container, jadi hati-hati kalo mau edit file  -->
-<?php include('./staticDashboard/sidebar.php'); ?>
+<?php 
+//login admun
+if(!isset($_SESSION)){
+    session_start();
+}
+
+//session admin
+if(!isset($_SESSION['isLoginAdm'])){
+    echo '<script>location.href = "../home.php"</script>';
+}else{
+    $adminEmail = $_SESSION['admLogEmail'];
+}
+
+include('./staticDashboard/sidebar.php');
+//ini perlu
+include('../query/dbConnection.php');
+
+?>
 
 <div class="container mt-5">
 

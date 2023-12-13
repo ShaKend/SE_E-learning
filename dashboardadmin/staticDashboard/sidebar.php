@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +36,7 @@
                     <a href="lessonsadmin.php"><i class="fa-solid fa-book"></i>Lessons </a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                    <a href="../query/logout.php"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
                 </li>
             </ul>
         </nav>

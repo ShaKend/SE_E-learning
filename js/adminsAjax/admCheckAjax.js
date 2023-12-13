@@ -28,7 +28,7 @@ function admLogin() {
       if (data == 1) {
         $("#errormessageAdm").html("<span class='spinner-border text-success'></span>");
         setTimeout(() => {
-          window.location.href = "./dashboardadmin/dasboardadmin.php";
+          window.location.href = "./dashboardadmin/dashboardadmin.php";
         }, 900);
       } else if (data == 0) {
         $("#errormessageAdm").html("<span class='text-danger'>Wrong</span>");
