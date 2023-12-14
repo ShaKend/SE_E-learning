@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+<?php ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +39,7 @@ session_start();
                     <a href="../home.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Home</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+                    <a href="../query/logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
                 </li>
             </ul>
         </nav>

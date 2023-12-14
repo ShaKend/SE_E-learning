@@ -462,4 +462,7 @@ i {
   .tableContent {
     width: 600px;
   }
+  #sidebar {
+    height: 95%;
+  }
 }

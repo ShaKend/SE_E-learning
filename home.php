@@ -1,5 +1,10 @@
 <!-- navbar -->
-<?php include('./static/navbar.php');?>
+<?php 
+include('./static/navbar.php');
+include_once('./query/dbConnection.php');
+
+
+?>
 
     <!-- starter page -->
     <section id="content1">

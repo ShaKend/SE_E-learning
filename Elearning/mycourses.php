@@ -7,33 +7,14 @@
             <div class="courses">
              <h1 class="Course-title">My Courses</h1><br>
             
-                <div class="mycourse">
-                    <div class="course-row">
-                    <table class="table">
-                    <thead>
-                        <tr >
-                            <th>Lessons ID</th>
-                            <th>Lessons Name</th>
-                            <th>Lessons Link</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>John Doe</td>
-                            <td>John Doe@gmail.com</td>
-                            <td>
-                                <button><i class="fa-solid fa-pen-to-square" style="color: #1361e7;"></i></button>
-                                <button><i class="fa-solid fa-trash" style="color: #ff0019;"></i></button> 
-                            </td>
-                        </tr>
-    
-    
-                    </tbody>
-                </table>
-                    </div>
+             <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
+            </div>
             </div>
         </div>
        

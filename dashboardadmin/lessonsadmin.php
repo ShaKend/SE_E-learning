@@ -39,7 +39,7 @@ if(isset($_REQUEST['delete'])){
                 <hr>
 
                 <form action="" method="post">
-                    <p style="color: #ffffff;">Enter Course ID: </p>
+                    <h5>Enter Course ID: </h5>
                     <input name="checkid" id="checkid" type="number">
                     <button style="background-color: #464444;color: #ffffff;" type="submit">Search</button>
                 </form>

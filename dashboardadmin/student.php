@@ -1,4 +1,5 @@
 <?php 
+include_once('../query/dbConnection.php');
 
 //login admun
 if(!isset($_SESSION)){
@@ -14,6 +15,19 @@ if(!isset($_SESSION['isLoginAdm'])){
 
 include('./staticDashboard/sidebar.php');
 
+$sql = "SELECT std_ID, std_name, std_email FROM students";
+$result = $conn->query($sql);
+
+//jika tombol delete dipencet
+if(isset($_REQUEST['delete'])){
+    $sql = "DELETE FROM students WHERE std_ID = {$_REQUEST['id']}";
+
+    if($conn->query($sql) == true){
+        echo '<meta http-equiv="refresh" content="0;URL=?deleted" />';
+    }else{
+        echo "Unable to delete";
+    }
+}
 ?>
     <div class="container mt-5">
 
@@ -23,9 +37,10 @@ include('./staticDashboard/sidebar.php');
 
                 <!-- Tabel -->
                 <div class="middlestudent">
-                    <p style="margin-left: 10px;">List Of Student : </p>
+                    <h3 class="text-light" style="margin-left: 10px;">List Of Student : </h3>
                 </div>
     
+                <?php if($result->num_rows > 0){ ?>
                 <table class="table">
                     <thead>
                         <tr >
@@ -36,36 +51,22 @@ include('./staticDashboard/sidebar.php');
                         </tr>
                     </thead>
                     <tbody>
+                    <?php while($row = $result->fetch_assoc()){ ?>
                         <tr>
-                            <td>1</td>
-                            <td>John Doe</td>
-                            <td>John Doe@gmail.com</td>
+                            <td><?= $row['std_ID']; ?></td>
+                            <td><?= $row['std_name']; ?></td>
+                            <td><?= $row['std_email']; ?></td>
                             <td>
-                                <button><i class="fa-solid fa-pen-to-square" style="color: #1361e7;"></i></button>
-                                <button><i class="fa-solid fa-trash" style="color: #ff0019;"></i></button> 
+                                <form action="" method="post" class="d-inline">
+                                    <input type="hidden" name="id" value="<?= $row['std_ID']; ?>">
+                                    <button name="delete"><i class="fa-solid fa-trash" style="color: #ff0019;"></i></button> 
+                                </form>
                             </td>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>John Doe</td>
-                            <td>John Doe@gmail.com</td>
-                            <td>
-                                <button><i class="fa-solid fa-pen-to-square" style="color: #1361e7;"></i></button>
-                                <button><i class="fa-solid fa-trash" style="color: #ff0019;"></i></button> 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>John Doe</td>
-                            <td>John Doe@gmail.com</td>
-                            <td>
-                                <button><i class="fa-solid fa-pen-to-square" style="color: #1361e7;"></i></button>
-                                <button><i class="fa-solid fa-trash" style="color: #ff0019;"></i></button> 
-                            </td>
-                        </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
-                
+                <?php } ?>
                 <!-- Akhir Tabel -->
 
         </div>
